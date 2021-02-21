@@ -9,15 +9,22 @@ namespace QuizApp.Models
 {
     public class QuizModel
     {
-        public int Score { get; private set; }
+        public static int Score { get; private set; }
+        public static int Count { get; private set; }
         public List<QuestionModel> Quiz{ get; private set; }
         public QuizModel()
         {
             Score = 0;
         }
 
+        public QuizModel( int y, int i = 0)
+        {
+            Score = 0;
+        }
+
         public void StartQuiz(int numberofquestions)
         {
+            Score = 0;
             var repo = new QuizRepository(new DataContext());
             var t = Task.Run(async () =>
             {
@@ -25,6 +32,7 @@ namespace QuizApp.Models
             });
 
             Quiz = t.Result.ToList();
+            Count = Quiz.Count;
         }
 
         public void ScoreQuestion(QuestionModel question)

@@ -31,5 +31,11 @@ namespace QuizApp.Views
         {
             NavigationService.Navigate(new Uri("Views/QuizView.xaml", UriKind.Relative));
         }
+
+        private void Results_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Views/ResultsView.xaml", UriKind.Relative));
+
+        }
     }
 }

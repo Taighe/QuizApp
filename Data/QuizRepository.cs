@@ -36,5 +36,17 @@ namespace QuizApp.Data
         {
             return m_context.Questions.Include(q => q.OptionModel).ToList();
         }
+
+        public List<QuestionDto> GetAllQuestionsResults()
+        {
+            var questions = m_context.Questions.Include(q => q.OptionModel).ToList();
+            List<QuestionDto> list = new List<QuestionDto>();
+            foreach(var question in questions)
+            {
+                list.Add(new QuestionDto(question));
+            }
+
+            return list;
+        }
     }
 }

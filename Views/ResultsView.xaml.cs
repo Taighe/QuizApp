@@ -18,11 +18,11 @@ namespace QuizApp.Views
     /// <summary>
     /// Interaction logic for QuizView.xaml
     /// </summary>
-    public partial class QuizView : Page
+    public partial class ResultsView : Page
     {
-        public QuizView()
+        public ResultsView()
         {
-            DataContext = new QuizViewModel();
+            DataContext = new ResultsViewModel();
             InitializeComponent();
         }
 
@@ -34,11 +34,6 @@ namespace QuizApp.Views
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Views/HomeView.xaml", UriKind.Relative));
-        }
-
-        private void Finish_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("Views/ResultsView.xaml", UriKind.Relative));
         }
     }
 }

@@ -31,7 +31,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Button Name="Next" Grid.Column="3" Grid.Row="4" Command="{Binding NextCommand}">Next</Button>
-        <Button Visibility="{Binding Finish}"  Name="Finish" Grid.Column="3" Grid.Row="4" Click="Home_Click">Finish</Button>
+        <Button Visibility="{Binding Finish}"  Name="Finish" Grid.Column="3" Grid.Row="4" Click="Finish_Click">Finish</Button>
         <Button Name="Home" Grid.Row="4" Command="{Binding HomeCommand}" Click="Home_Click">Back To Home Screen</Button>
     </Grid>
 </Page>

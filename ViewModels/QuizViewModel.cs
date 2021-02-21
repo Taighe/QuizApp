@@ -75,7 +75,7 @@ namespace QuizApp.ViewModels
         {
             Console.WriteLine("init");
             m_quizModel = new QuizModel();
-            m_quizModel.StartQuiz(48);
+            m_quizModel.StartQuiz(51);
             m_quiz = m_quizModel.Quiz;
             OnPropertyChanged(nameof(Finish));
         }
@@ -89,7 +89,10 @@ namespace QuizApp.ViewModels
         {
             m_quizModel.ScoreQuestion(m_quiz[m_questionIndex]);
             m_questionIndex++;
-            UpdateProperties();
+            if(m_questionIndex < m_quiz.Count)
+            {
+                UpdateProperties();
+            }
         }
 
         private void UpdateProperties()
