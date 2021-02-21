@@ -1,1865 +1,1918 @@
 [
-  {
-    "Id": 1,
-    "Question": "In which of these situations are interfaces better than abstract classes?",
-    "OptionModel": [
-      {
-        "Id": 1,
-        "Answer": "When you need to define an object type's characteristics, use an interface. When you need to define an object type's capabilities, use an abstract class.",
-        "Choice": false
-      },
-      {
-        "Id": 2,
-        "Answer": "Interfaces are a legacy of older versions of C#, and are interchangeable with the newer abstract class feature.",
-        "Choice": false
-      },
-      {
-        "Id": 3,
-        "Answer": "When you need a list of capabilities and data that are classes-agnostic, use an interface. When you need a certain object type to share characteristics, use an abstract class.",
-        "Choice": false
-      },
-      {
-        "Id": 4,
-        "Answer": " You should use both an interface and an abstract class when defining any\r\ncomplex object.",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 2,
-    "Question": "Which statement is true of delegates?",
-    "OptionModel": [
-      {
-        "Id": 5,
-        "Answer": "Delegates are not supported in the current version of C#",
-        "Choice": false
-      },
-      {
-        "Id": 6,
-        "Answer": "They cannot be used as callbacks.",
-        "Choice": false
-      },
-      {
-        "Id": 7,
-        "Answer": "Only variables can be passed to delegates as parameters",
-        "Choice": false
-      },
-      {
-        "Id": 8,
-        "Answer": "They can be chained together.",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 3,
-    "Question": "Which choice best defines C#'s asynchronous programming model?",
-    "OptionModel": [
-      {
-        "Id": 9,
-        "Answer": "reactive",
-        "Choice": false
-      },
-      {
-        "Id": 10,
-        "Answer": "inherited callback",
-        "Choice": false
-      },
-      {
-        "Id": 11,
-        "Answer": "task-based",
-        "Choice": false
-      },
-      {
-        "Id": 12,
-        "Answer": "callback-based",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 4,
-    "Question": "How would you determine if a class has a particular attribute?",
-    "OptionModel": [
-      {
-        "Id": 13,
-        "Answer": "var type = typeof(SomeType);\nvar attribute = type.GetCustomAttribute<SomeAttribute>();\n",
-        "Choice": false
-      },
-      {
-        "Id": 14,
-        "Answer": "var typeof(MyPresentationModel).Should().BeDecoratedWith<SomeAttribute>();",
-        "Choice": false
-      },
-      {
-        "Id": 15,
-        "Answer": "Attribute.GetCustomAttribute, typeof(SubControllerActionToViewDataAttribute);",
-        "Choice": false
-      },
-      {
-        "Id": 16,
-        "Answer": "Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute));",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 5,
-    "Question": "What is the difference between the ref and out keywords?",
-    "OptionModel": [
-      {
-        "Id": 17,
-        "Answer": "Variables passed to out specify that the parameter is an output parameter, while ref specifies that a variable may be passed to a function without being initialized.",
-        "Choice": false
-      },
-      {
-        "Id": 18,
-        "Answer": "Variables passed to ref can be passed to a function without being initialized, while out specifies that the value is a reference value that can be changed inside the calling method.",
-        "Choice": false
-      },
-      {
-        "Id": 19,
-        "Answer": "Variables passed to out can be passed to a function without being initialized, while ref specifies that the value is a reference value that can be changed inside the calling method.",
-        "Choice": false
-      },
-      {
-        "Id": 20,
-        "Answer": "Variables passed to ref specify that the parameter is an output parameter, while out specifies that a variable may be passed to a function without being initialized.",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 6,
-    "Question": "How could you retrieve information about a class, as well as create an instance at runtime?",
-    "OptionModel": [
-      {
-        "Id": 21,
-        "Answer": "reflection",
-        "Choice": false
-      },
-      {
-        "Id": 22,
-        "Answer": "serialization",
-        "Choice": false
-      },
-      {
-        "Id": 23,
-        "Answer": "abstraction",
-        "Choice": false
-      },
-      {
-        "Id": 24,
-        "Answer": "dependency injection",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 7,
-    "Question": "What is this code an example of?\r\n \r\n\tprivate static object objA;\r\n\tprivate static object objB;\r\n\r\n\tprivate static void performTaskA()\r\n\t{\r\n\t\tlock (obj)\r\n\t\t{\r\n\t\t\tThread.Sleep(1000);\r\n\t\t\tlock (objA) { }\r\n\t\t}\r\n\t}\r\n\r\n\tprivate static void PerformTaskB()\r\n\t{\r\n\t\tlock (objA)\r\n\t\t{\r\n\t\t\tlock (objB) { }\r\n\t\t}\r\n\t}",
-    "OptionModel": [
-      {
-        "Id": 25,
-        "Answer": "a private class that uses multithreading",
-        "Choice": false
-      },
-      {
-        "Id": 26,
-        "Answer": "multithread coding",
-        "Choice": false
-      },
-      {
-        "Id": 27,
-        "Answer": "thread mismanagement",
-        "Choice": false
-      },
-      {
-        "Id": 28,
-        "Answer": "a potential deadlock",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 8,
-    "Question": "What is the difference between an anonymous type and a regular data type?",
-    "OptionModel": [
-      {
-        "Id": 29,
-        "Answer": "Anonymous types don't have type names",
-        "Choice": false
-      },
-      {
-        "Id": 30,
-        "Answer": "Anonymous types can only be static",
-        "Choice": false
-      },
-      {
-        "Id": 31,
-        "Answer": "Anonymous types can be used only in struts",
-        "Choice": false
-      },
-      {
-        "Id": 32,
-        "Answer": "Anonymous types don't work with LINQ.",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 9,
-    "Question": "When would you use a Dictionary rather that an Array type in your application?",
-    "OptionModel": [
-      {
-        "Id": 33,
-        "Answer": "when you need a jagged collection structure",
-        "Choice": false
-      },
-      {
-        "Id": 34,
-        "Answer": "when you need to store values of the same type",
-        "Choice": false
-      },
-      {
-        "Id": 35,
-        "Answer": "when you need to store key-value pairs rather than single values",
-        "Choice": false
-      },
-      {
-        "Id": 36,
-        "Answer": "when you need an ordered, searchable list",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 10,
-    "Question": "What is the difference between a.Equals(b) and a == b?",
-    "OptionModel": [
-      {
-        "Id": 37,
-        "Answer": "The .Equals method compares reference identities while the == compares contents.",
-        "Choice": false
-      },
-      {
-        "Id": 38,
-        "Answer": "The .Equals method compares primitive values while == compares all values.",
-        "Choice": false
-      },
-      {
-        "Id": 39,
-        "Answer": "The .Equals method compares contents while == compares references reference identity.",
-        "Choice": false
-      },
-      {
-        "Id": 40,
-        "Answer": "The .Equals method compares reference type while == compares primitive value types.",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 11,
-    "Question": "Which choice best describes a deadlock situation?",
-    "OptionModel": [
-      {
-        "Id": 41,
-        "Answer": "when you try to instantiate two objects at the same time in the same class or struct",
-        "Choice": false
-      },
-      {
-        "Id": 42,
-        "Answer": "when you are trying to execute an action after a user event is registered",
-        "Choice": false
-      },
-      {
-        "Id": 43,
-        "Answer": "when simultaneous instructions are waiting on each other to finish before executing",
-        "Choice": false
-      },
-      {
-        "Id": 44,
-        "Answer": "when you try to execute a series of events simultaneously on multiple threads",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 12,
-    "Question": "How does the async keyword work?",
-    "OptionModel": [
-      {
-        "Id": 45,
-        "Answer": "It allows access to asynchronous methods in the C# API",
-        "Choice": false
-      },
-      {
-        "Id": 46,
-        "Answer": "It allows thread pooling and synchronous processes in static classes.",
-        "Choice": false
-      },
-      {
-        "Id": 47,
-        "Answer": "It allows the await keyword to be used in a method",
-        "Choice": false
-      },
-      {
-        "Id": 48,
-        "Answer": "It allows access to synchronous methods in the C# API",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 13,
-    "Question": "What is an object in C#?",
-    "OptionModel": [
-      {
-        "Id": 49,
-        "Answer": "a class or struct, including its variables and functions",
-        "Choice": false
-      },
-      {
-        "Id": 50,
-        "Answer": "a primitive data type that can be created only at compile time",
-        "Choice": false
-      },
-      {
-        "Id": 51,
-        "Answer": "a value type that can be used only with an abstract class",
-        "Choice": false
-      },
-      {
-        "Id": 52,
-        "Answer": "an instance of a class or struct that includes fields, properties, and/or methods",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 14,
-    "Question": "Which code snippet declares an anonymous type named usedData?",
-    "OptionModel": [
-      {
-        "Id": 53,
-        "Answer": "var userData = new UserData(\"John\", 32 );",
-        "Choice": false
-      },
-      {
-        "Id": 54,
-        "Answer": "var userData = new { name = \"John\", age = 32 };",
-        "Choice": false
-      },
-      {
-        "Id": 55,
-        "Answer": "AType userData = new AType { name = \"John\", age = 32 };",
-        "Choice": false
-      },
-      {
-        "Id": 56,
-        "Answer": "Anonymous userData = new Anonymous { name = \"John\", age = 32 };",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 15,
-    "Question": "What will be returned when this method is executed?\n public void userInput(string charParamters) { }",
-    "OptionModel": [
-      {
-        "Id": 57,
-        "Answer": "nothing",
-        "Choice": false
-      },
-      {
-        "Id": 58,
-        "Answer": "a Boolean",
-        "Choice": false
-      },
-      {
-        "Id": 59,
-        "Answer": "a string variable",
-        "Choice": false
-      },
-      {
-        "Id": 60,
-        "Answer": "an integer",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 16,
-    "Question": "What is stored on the Heap?",
-    "OptionModel": [
-      {
-        "Id": 61,
-        "Answer": "int",
-        "Choice": false
-      },
-      {
-        "Id": 62,
-        "Answer": "enum",
-        "Choice": false
-      },
-      {
-        "Id": 63,
-        "Answer": "reference type",
-        "Choice": false
-      },
-      {
-        "Id": 64,
-        "Answer": "long",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 17,
-    "Question": "In what order would the employee names in this example be printed to the console?\r\n\r\n string[] employees = { \"Joe\", \"Bob\", \"Carol\", \"Alice\", \"Will\" }; \r\n IEnumerable<string> employeeQuery = from person in employees orderby person select person;\r\n foreach(string employee in employeeQuery) \r\n {  \r\n\tConsole.WriteLine(employee);  \r\n }",
-    "OptionModel": [
-      {
-        "Id": 65,
-        "Answer": "ascending",
-        "Choice": false
-      },
-      {
-        "Id": 66,
-        "Answer": "unordered",
-        "Choice": false
-      },
-      {
-        "Id": 67,
-        "Answer": "descending",
-        "Choice": false
-      },
-      {
-        "Id": 68,
-        "Answer": "first in, first out",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 18,
-    "Question": "Lambda expressions are often used in tandem with which of the following?",
-    "OptionModel": [
-      {
-        "Id": 69,
-        "Answer": "Namespaces",
-        "Choice": false
-      },
-      {
-        "Id": 70,
-        "Answer": "LINQ",
-        "Choice": false
-      },
-      {
-        "Id": 71,
-        "Answer": "Type Aliasing",
-        "Choice": false
-      },
-      {
-        "Id": 72,
-        "Answer": "Assemblies",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 19,
-    "Question": "What is the correct formatting for single line and multiline comments?",
-    "OptionModel": [
-      {
-        "Id": 73,
-        "Answer": "// - Single Line / - Multiline",
-        "Choice": false
-      },
-      {
-        "Id": 74,
-        "Answer": "// Multiline /_ Single Line _/",
-        "Choice": false
-      },
-      {
-        "Id": 75,
-        "Answer": "//* Multiline / Single Line",
-        "Choice": false
-      },
-      {
-        "Id": 76,
-        "Answer": "// Single Line /* Multiline */",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 20,
-    "Question": "How do you make a method in an abstract class overridable?",
-    "OptionModel": [
-      {
-        "Id": 77,
-        "Answer": "Make it public",
-        "Choice": false
-      },
-      {
-        "Id": 78,
-        "Answer": "Make it static",
-        "Choice": false
-      },
-      {
-        "Id": 79,
-        "Answer": "Make it private",
-        "Choice": false
-      },
-      {
-        "Id": 80,
-        "Answer": "Make it virtual",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 21,
-    "Question": "How would you write code for an integer property called Age with a getter and setter?",
-    "OptionModel": [
-      {
-        "Id": 81,
-        "Answer": "public int Age { get - set }",
-        "Choice": false
-      },
-      {
-        "Id": 82,
-        "Answer": "public int Age: get set;",
-        "Choice": false
-      },
-      {
-        "Id": 83,
-        "Answer": "public int Age (get, set );",
-        "Choice": false
-      },
-      {
-        "Id": 84,
-        "Answer": "public int Age { get; set; }",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 22,
-    "Question": "What is an abstract class?",
-    "OptionModel": [
-      {
-        "Id": 85,
-        "Answer": "a class that is denoted by the class keyword (can be seen and used by any other class in the system--thus it is by default public)",
-        "Choice": false
-      },
-      {
-        "Id": 86,
-        "Answer": "something denoted by the abstract keyword and used system wide; if you want any program to create an object of a class you use the abstract class",
-        "Choice": false
-      },
-      {
-        "Id": 87,
-        "Answer": "a class that is denoted by the virtual keyword",
-        "Choice": false
-      },
-      {
-        "Id": 88,
-        "Answer": "a class that can be used only as base class",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 23,
-    "Question": "When using a thread pool what happens to a given thread after it finishes its task?",
-    "OptionModel": [
-      {
-        "Id": 89,
-        "Answer": "The thread is destroyed and memory is freed up.",
-        "Choice": false
-      },
-      {
-        "Id": 90,
-        "Answer": "The thread runs in loop until the next assignment.",
-        "Choice": false
-      },
-      {
-        "Id": 91,
-        "Answer": "The thread goes inactive in the background and waits for garbage collection.",
-        "Choice": false
-      },
-      {
-        "Id": 92,
-        "Answer": "The thread returns to the pool for reuse.",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 24,
-    "Question": "Which choice represents a class that inherits behavior from a base class?",
-    "OptionModel": [
-      {
-        "Id": 93,
-        "Answer": "a second base class",
-        "Choice": false
-      },
-      {
-        "Id": 94,
-        "Answer": "a revised class",
-        "Choice": false
-      },
-      {
-        "Id": 95,
-        "Answer": "a derived class",
-        "Choice": false
-      },
-      {
-        "Id": 96,
-        "Answer": "a parent class",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 25,
-    "Question": "What does operator overloading allow you to do?",
-    "OptionModel": [
-      {
-        "Id": 97,
-        "Answer": "hide built-in operatores when necessary",
-        "Choice": false
-      },
-      {
-        "Id": 98,
-        "Answer": "add methods to be interpreted by the compiler at runtime",
-        "Choice": false
-      },
-      {
-        "Id": 99,
-        "Answer": "define how enums and other primitive value types work within the rest of the application",
-        "Choice": false
-      },
-      {
-        "Id": 100,
-        "Answer": "define custom functionality for common operators like addition and equality",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 26,
-    "Question": "What it the main purpose of LINQ?",
-    "OptionModel": [
-      {
-        "Id": 101,
-        "Answer": "to delete duplicate data",
-        "Choice": false
-      },
-      {
-        "Id": 102,
-        "Answer": "ti bind namespaces and assemblies",
-        "Choice": false
-      },
-      {
-        "Id": 103,
-        "Answer": "to query and transform data",
-        "Choice": false
-      },
-      {
-        "Id": 104,
-        "Answer": "to connect assemblies",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 27,
-    "Question": "What is the correct syntax for a new generic list of strings named contacts?",
-    "OptionModel": [
-      {
-        "Id": 105,
-        "Answer": "public List contact = new List();",
-        "Choice": false
-      },
-      {
-        "Id": 106,
-        "Answer": "public List(string names) contacts = new List(string names)();",
-        "Choice": false
-      },
-      {
-        "Id": 107,
-        "Answer": "var contacts = new List();",
-        "Choice": false
-      },
-      {
-        "Id": 108,
-        "Answer": "var contacts = new List(string);",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 28,
-    "Question": "What is the difference between throw exceptions and throw clauses?",
-    "OptionModel": [
-      {
-        "Id": 109,
-        "Answer": "Throw clauses fire only at runtime, while throw exceptions can fire at any time.",
-        "Choice": false
-      },
-      {
-        "Id": 110,
-        "Answer": "Throw exceptions overwrite the stack trace, while throw clauses retain the stack information.",
-        "Choice": false
-      },
-      {
-        "Id": 111,
-        "Answer": "Throw clauses overwrite the stack trace, while throw exceptions retain the stack information.",
-        "Choice": false
-      },
-      {
-        "Id": 112,
-        "Answer": "Throw exceptions fire only at runtime, while throw clauses can fire during compile",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 29,
-    "Question": "When an asynchronous method is executed, the code runs but nothing happens other than a compiler warning. What is most likely causing the method to not return anything?",
-    "OptionModel": [
-      {
-        "Id": 113,
-        "Answer": "The return yield statement is missing at the end of the method.",
-        "Choice": false
-      },
-      {
-        "Id": 114,
-        "Answer": "The method is missing an await keyword in its body.",
-        "Choice": false
-      },
-      {
-        "Id": 115,
-        "Answer": "The wait keyword is missing from the end of the method.",
-        "Choice": false
-      },
-      {
-        "Id": 116,
-        "Answer": "The yield keyword is missing from the method.",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 30,
-    "Question": "What are C# events?",
-    "OptionModel": [
-      {
-        "Id": 117,
-        "Answer": " system actions that communicate directly with the compiler at runtime",
-        "Choice": false
-      },
-      {
-        "Id": 118,
-        "Answer": "actions that execute when the code compiles, generating logs and test output",
-        "Choice": false
-      },
-      {
-        "Id": 119,
-        "Answer": "actions that generate notifications, which are sent to their registered listeners** <= Correct",
-        "Choice": false
-      },
-      {
-        "Id": 120,
-        "Answer": "user-only methods that send data to the application's back end",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 31,
-    "Question": "What kind of values can arrays store?",
-    "OptionModel": [
-      {
-        "Id": 121,
-        "Answer": "unordered collections of numerc values",
-        "Choice": false
-      },
-      {
-        "Id": 122,
-        "Answer": "key-value pairs of any C# supported type",
-        "Choice": false
-      },
-      {
-        "Id": 123,
-        "Answer": "class and struct instances",
-        "Choice": false
-      },
-      {
-        "Id": 124,
-        "Answer": "multiple variables, or collections, of the same type",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 32,
-    "Question": "Given this enumeration, how would you access the integer-type value of 'AppState.Loading'?\n enum AppState { OffLine, Loading, Ready }",
-    "OptionModel": [
-      {
-        "Id": 125,
-        "Answer": "string currentState = (string)AppState.Loading;",
-        "Choice": false
-      },
-      {
-        "Id": 126,
-        "Answer": "string currentState = AppState.Loading.integralVal;",
-        "Choice": false
-      },
-      {
-        "Id": 127,
-        "Answer": "int currentState = AppState.Loading.rawValue;",
-        "Choice": false
-      },
-      {
-        "Id": 128,
-        "Answer": "int currentState = (int)AppState.Loading;",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 33,
-    "Question": "What character would you use to start a regular expression pattern at a word boundary?",
-    "OptionModel": [
-      {
-        "Id": 129,
-        "Answer": "d",
-        "Choice": false
-      },
-      {
-        "Id": 130,
-        "Answer": "\\a",
-        "Choice": false
-      },
-      {
-        "Id": 131,
-        "Answer": "\\b",
-        "Choice": false
-      },
-      {
-        "Id": 132,
-        "Answer": "\\w",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 34,
-    "Question": "To conform to the following interface, which of its members need to be\r\nimplemented?\r\n\r\n\tpublic interface INameble\r\n\t{\r\n\t\tstring FirstName { get; set; }\r\n\t\tstring LastName { get; }\r\n\t}",
-    "OptionModel": [
-      {
-        "Id": 133,
-        "Answer": "Both the FirstName and LastName properties need to be implemented.",
-        "Choice": false
-      },
-      {
-        "Id": 134,
-        "Answer": "Neither, they are both optional.",
-        "Choice": false
-      },
-      {
-        "Id": 135,
-        "Answer": "Only the LastName property needs to be implemented.",
-        "Choice": false
-      },
-      {
-        "Id": 136,
-        "Answer": "Only the FirstName property needs to be implemented.",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 35,
-    "Question": "You're dealing with multiple assemblies in your program, but are worried about memory allocation. At what point in the program life cycle are assemblies loaded into memory?",
-    "OptionModel": [
-      {
-        "Id": 137,
-        "Answer": "at runtime",
-        "Choice": false
-      },
-      {
-        "Id": 138,
-        "Answer": "at compile time",
-        "Choice": false
-      },
-      {
-        "Id": 139,
-        "Answer": "only when required",
-        "Choice": false
-      },
-      {
-        "Id": 140,
-        "Answer": "only when programmatically loaded",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 36,
-    "Question": "What is most accurate description of a regular expression?",
-    "OptionModel": [
-      {
-        "Id": 141,
-        "Answer": "A regular expression is a C# tool used to parse HTML",
-        "Choice": false
-      },
-      {
-        "Id": 142,
-        "Answer": "A regular expression is a special text string for describing a search patters.",
-        "Choice": false
-      },
-      {
-        "Id": 143,
-        "Answer": "A regular expression allows a variable to be passed by reference.",
-        "Choice": false
-      },
-      {
-        "Id": 144,
-        "Answer": "A regular expression allows a class to conform to the Equatable protocol.",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 37,
-    "Question": "Why would you use a class field in C#",
-    "OptionModel": [
-      {
-        "Id": 145,
-        "Answer": "To define behaviours of the class",
-        "Choice": false
-      },
-      {
-        "Id": 146,
-        "Answer": "To hold information and data contained in the class object",
-        "Choice": false
-      },
-      {
-        "Id": 147,
-        "Answer": "To communicate between classes and object",
-        "Choice": false
-      },
-      {
-        "Id": 148,
-        "Answer": "To store the class definition value",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 38,
-    "Question": "When would you use generics in your code?",
-    "OptionModel": [
-      {
-        "Id": 149,
-        "Answer": "to increase code performance",
-        "Choice": false
-      },
-      {
-        "Id": 150,
-        "Answer": "all of these answers",
-        "Choice": false
-      },
-      {
-        "Id": 151,
-        "Answer": "when code reuse is a priority",
-        "Choice": false
-      },
-      {
-        "Id": 152,
-        "Answer": "when type safety is important",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 39,
-    "Question": "What prints to the console when this code is executed?\r\n\r\n\tpublic delegate void AuthCallback(bool validUser);\r\n\tpublic static AuthCallback loginCallback : Login;\r\n\t\r\n\tpublic static void Login()\r\n\t{\r\n\t\tConsole.WriteLine(\"Valid user!\");\r\n\t}\r\n\t\r\n\tpublic static void Main(string[] args) { loginCallback(true); }",
-    "OptionModel": [
-      {
-        "Id": 153,
-        "Answer": "Login successful...",
-        "Choice": false
-      },
-      {
-        "Id": 154,
-        "Answer": "Valid user!",
-        "Choice": false
-      },
-      {
-        "Id": 155,
-        "Answer": "an error, because the method signature of Login doesn't match the delegate. It will throw an error because you cant apply Inheritance to methods that way.",
-        "Choice": false
-      },
-      {
-        "Id": 156,
-        "Answer": "Login successful... Valid user!",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 40,
-    "Question": "How would you declare a sealed class named User?",
-    "OptionModel": [
-      {
-        "Id": 157,
-        "Answer": "public class User",
-        "Choice": false
-      },
-      {
-        "Id": 158,
-        "Answer": "abstract User {}",
-        "Choice": false
-      },
-      {
-        "Id": 159,
-        "Answer": "sealed class User",
-        "Choice": false
-      },
-      {
-        "Id": 160,
-        "Answer": "private sealed class User",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 41,
-    "Question": "How would you write a delegeate named ResultCallback with an int parameter named responseCode?",
-    "OptionModel": [
-      {
-        "Id": 161,
-        "Answer": "public delegate void ResultCallback<(int) responseCode> ;",
-        "Choice": false
-      },
-      {
-        "Id": 162,
-        "Answer": "public delegate ResultCallback(int responseCode) ;",
-        "Choice": false
-      },
-      {
-        "Id": 163,
-        "Answer": "public delegate void ResultCallback(int responseCode) ;",
-        "Choice": false
-      },
-      {
-        "Id": 164,
-        "Answer": "public void delegate ResultCallback<int responseCode> ;",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 42,
-    "Question": "What is the difference between non-static and static classes?",
-    "OptionModel": [
-      {
-        "Id": 165,
-        "Answer": "non-static classes need to be initialized before use, while static classes do not reference",
-        "Choice": false
-      },
-      {
-        "Id": 166,
-        "Answer": " non-static classes are accessible only from an interface while static classes are accessible from anywhere",
-        "Choice": false
-      },
-      {
-        "Id": 167,
-        "Answer": "non-static classes need to initialize all class members at runtime, while static classes do not",
-        "Choice": false
-      },
-      {
-        "Id": 168,
-        "Answer": "non-static classes do not need to be initialized while static classes do",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 43,
-    "Question": "Which characteristic prevents this code from compiling?\n public int age=\"28\"",
-    "OptionModel": [
-      {
-        "Id": 169,
-        "Answer": "type safety",
-        "Choice": false
-      },
-      {
-        "Id": 170,
-        "Answer": "single inheritance",
-        "Choice": false
-      },
-      {
-        "Id": 171,
-        "Answer": "dependency injection",
-        "Choice": false
-      },
-      {
-        "Id": 172,
-        "Answer": "multiple inheritance",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 44,
-    "Question": "How would you serialize this class?\n public class User {}",
-    "OptionModel": [
-      {
-        "Id": 173,
-        "Answer": "mark the User class with the DeserializableAttribute",
-        "Choice": false
-      },
-      {
-        "Id": 174,
-        "Answer": "Declare it as public serializable class User {}",
-        "Choice": false
-      },
-      {
-        "Id": 175,
-        "Answer": "Mark it with the SerializableAttribute",
-        "Choice": false
-      },
-      {
-        "Id": 176,
-        "Answer": "Declare it as private serializable class User{}",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 45,
-    "Question": "How would you write a delegate named ResultCallback with an int parameter named responseCode",
-    "OptionModel": [
-      {
-        "Id": 177,
-        "Answer": "public delegate ResultCallback(int responseCode)",
-        "Choice": false
-      },
-      {
-        "Id": 178,
-        "Answer": "public delegate void ResultCallback<(int) responseCode>;",
-        "Choice": false
-      },
-      {
-        "Id": 179,
-        "Answer": "public void delegate ResultCallback;",
-        "Choice": false
-      },
-      {
-        "Id": 180,
-        "Answer": "public delegate void ResultCallback(int responseCode);",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 46,
-    "Question": "What is the difference between a static and non-static method?",
-    "OptionModel": [
-      {
-        "Id": 181,
-        "Answer": "non-static methods always need to have a void return type",
-        "Choice": false
-      },
-      {
-        "Id": 182,
-        "Answer": "non-static methods do not have access to static member variables",
-        "Choice": false
-      },
-      {
-        "Id": 183,
-        "Answer": "static methods do not have to instantiate an instance of the class to call the method",
-        "Choice": false
-      },
-      {
-        "Id": 184,
-        "Answer": "static methods always have to be public",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 47,
-    "Question": "What is the correct way to write an event named apiResult based on a delegate named ResultCallback?",
-    "OptionModel": [
-      {
-        "Id": 185,
-        "Answer": "public void event ResultCallback apiResult;",
-        "Choice": false
-      },
-      {
-        "Id": 186,
-        "Answer": "public event ResultCallback(() -> apiResult);",
-        "Choice": false
-      },
-      {
-        "Id": 187,
-        "Answer": "public event void ResultCallback",
-        "Choice": false
-      },
-      {
-        "Id": 188,
-        "Answer": "public event ResultCallback apiResult;",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 48,
-    "Question": "When will the code inside finally block be executed in a try-catch statement?",
-    "OptionModel": [
-      {
-        "Id": 189,
-        "Answer": "if there is an error, it won't execute at all",
-        "Choice": false
-      },
-      {
-        "Id": 190,
-        "Answer": "between the try and catch blocks",
-        "Choice": false
-      },
-      {
-        "Id": 191,
-        "Answer": "after the try and catch blocks",
-        "Choice": false
-      },
-      {
-        "Id": 192,
-        "Answer": "when the finally block overrides the catch block and executes in its place",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 49,
-    "Question": "What method correctly extends the string class?",
-    "OptionModel": [
-      {
-        "Id": 193,
-        "Answer": "public static string IsvalidName(this string i, string value) {}",
-        "Choice": false
-      },
-      {
-        "Id": 194,
-        "Answer": "public static void IsvalidName(this string i, string value) {}",
-        "Choice": false
-      },
-      {
-        "Id": 195,
-        "Answer": "public string IsvalidName(this string i, string value) {}",
-        "Choice": false
-      },
-      {
-        "Id": 196,
-        "Answer": "public void IsvalidName(this string i, string value) {}",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 50,
-    "Question": "C# class can inherit multiple?",
-    "OptionModel": [
-      {
-        "Id": 197,
-        "Answer": "Classes",
-        "Choice": false
-      },
-      {
-        "Id": 198,
-        "Answer": "Interfaces",
-        "Choice": false
-      },
-      {
-        "Id": 199,
-        "Answer": "Abstract Classes",
-        "Choice": false
-      },
-      {
-        "Id": 200,
-        "Answer": "Static Classes",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 51,
-    "Question": "Which of following are value types in C#?",
-    "OptionModel": [
-      {
-        "Id": 201,
-        "Answer": "Int32",
-        "Choice": false
-      },
-      {
-        "Id": 202,
-        "Answer": "Double",
-        "Choice": false
-      },
-      {
-        "Id": 203,
-        "Answer": "Decimal",
-        "Choice": false
-      },
-      {
-        "Id": 204,
-        "Answer": "All of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 52,
-    "Question": "Which of the following is a reference type in C#",
-    "OptionModel": [
-      {
-        "Id": 205,
-        "Answer": "String",
-        "Choice": false
-      },
-      {
-        "Id": 206,
-        "Answer": "Long",
-        "Choice": false
-      },
-      {
-        "Id": 207,
-        "Answer": "Boolean",
-        "Choice": false
-      },
-      {
-        "Id": 208,
-        "Answer": "None of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 53,
-    "Question": "What is a nullable type?",
-    "OptionModel": [
-      {
-        "Id": 209,
-        "Answer": "It allows assignment of null to reference type",
-        "Choice": false
-      },
-      {
-        "Id": 210,
-        "Answer": "It allows assignment of null to value type",
-        "Choice": false
-      },
-      {
-        "Id": 211,
-        "Answer": "It allows assignment of null to static class",
-        "Choice": false
-      },
-      {
-        "Id": 212,
-        "Answer": "None of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 54,
-    "Question": "Struct is a?",
-    "OptionModel": [
-      {
-        "Id": 213,
-        "Answer": "Reference type",
-        "Choice": false
-      },
-      {
-        "Id": 214,
-        "Answer": "Value type",
-        "Choice": false
-      },
-      {
-        "Id": 215,
-        "Answer": "Class type",
-        "Choice": false
-      },
-      {
-        "Id": 216,
-        "Answer": "String type",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 55,
-    "Question": "10 > 9 ? \"10 is greater than 9\" : \"9 is greater than 10\" is an example of?",
-    "OptionModel": [
-      {
-        "Id": 217,
-        "Answer": "Ternary operator",
-        "Choice": false
-      },
-      {
-        "Id": 218,
-        "Answer": "Conditional operator",
-        "Choice": false
-      },
-      {
-        "Id": 219,
-        "Answer": "Greater than operator",
-        "Choice": false
-      },
-      {
-        "Id": 220,
-        "Answer": "Inverse operator",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 57,
-    "Question": "Which of the following datatype can be used with enum?",
-    "OptionModel": [
-      {
-        "Id": 221,
-        "Answer": "int",
-        "Choice": false
-      },
-      {
-        "Id": 222,
-        "Answer": "string",
-        "Choice": false
-      },
-      {
-        "Id": 223,
-        "Answer": "boolean",
-        "Choice": false
-      },
-      {
-        "Id": 224,
-        "Answer": "All of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 58,
-    "Question": "What is a indexer?",
-    "OptionModel": [
-      {
-        "Id": 225,
-        "Answer": "It allows an instance of a class to be indexed like an array",
-        "Choice": false
-      },
-      {
-        "Id": 226,
-        "Answer": "It allows enumerator with class",
-        "Choice": false
-      },
-      {
-        "Id": 227,
-        "Answer": "It creates index for instances of a class",
-        "Choice": false
-      },
-      {
-        "Id": 228,
-        "Answer": "None of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 59,
-    "Question": "String data type is?",
-    "OptionModel": [
-      {
-        "Id": 229,
-        "Answer": "Mutable",
-        "Choice": false
-      },
-      {
-        "Id": 230,
-        "Answer": "Immutable",
-        "Choice": false
-      },
-      {
-        "Id": 231,
-        "Answer": "Static",
-        "Choice": false
-      },
-      {
-        "Id": 232,
-        "Answer": "Value type",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 60,
-    "Question": "An array in C# starts with ___ index.",
-    "OptionModel": [
-      {
-        "Id": 233,
-        "Answer": "1",
-        "Choice": false
-      },
-      {
-        "Id": 234,
-        "Answer": "0",
-        "Choice": false
-      },
-      {
-        "Id": 235,
-        "Answer": "-1",
-        "Choice": false
-      },
-      {
-        "Id": 236,
-        "Answer": "None of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 61,
-    "Question": "Which of the following is the right way of declaring an array?",
-    "OptionModel": [
-      {
-        "Id": 237,
-        "Answer": "int[] intArray = newint[];",
-        "Choice": false
-      },
-      {
-        "Id": 238,
-        "Answer": "int intArray[] = new int[5];",
-        "Choice": false
-      },
-      {
-        "Id": 239,
-        "Answer": "int[] intArray = new it[5];",
-        "Choice": false
-      },
-      {
-        "Id": 240,
-        "Answer": "int[5] intArray = new int[];",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 62,
-    "Question": "Which of the following is true for Readonly variables?",
-    "OptionModel": [
-      {
-        "Id": 241,
-        "Answer": "Value will be assigned at runtime",
-        "Choice": false
-      },
-      {
-        "Id": 242,
-        "Answer": "Value will be assigned at compile time",
-        "Choice": false
-      },
-      {
-        "Id": 243,
-        "Answer": "Value will be assigned when it accessed first time",
-        "Choice": false
-      },
-      {
-        "Id": 244,
-        "Answer": "None of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 63,
-    "Question": "Which of the following statement is true?",
-    "OptionModel": [
-      {
-        "Id": 245,
-        "Answer": "try block must be followed by catch or finally block or both",
-        "Choice": false
-      },
-      {
-        "Id": 246,
-        "Answer": "finally block cannot include a return statement",
-        "Choice": false
-      },
-      {
-        "Id": 247,
-        "Answer": "try block can include another try block",
-        "Choice": false
-      },
-      {
-        "Id": 248,
-        "Answer": "All of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 3
-  },
-  {
-    "Id": 64,
-    "Question": "Which of the following statement is true?",
-    "OptionModel": [
-      {
-        "Id": 249,
-        "Answer": "A finally block may not execute every time",
-        "Choice": false
-      },
-      {
-        "Id": 250,
-        "Answer": "A  return or break statement cannot exit a finally block",
-        "Choice": false
-      },
-      {
-        "Id": 251,
-        "Answer": "A finally block can come before catch block",
-        "Choice": false
-      },
-      {
-        "Id": 252,
-        "Answer": "Multiple finally block is possible",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 65,
-    "Question": "Func and Action are the types of?",
-    "OptionModel": [
-      {
-        "Id": 253,
-        "Answer": "Utility function",
-        "Choice": false
-      },
-      {
-        "Id": 254,
-        "Answer": "Delegate",
-        "Choice": false
-      },
-      {
-        "Id": 255,
-        "Answer": "Event",
-        "Choice": false
-      },
-      {
-        "Id": 256,
-        "Answer": "Generic class",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 67,
-    "Question": "Return type of Predicate<T>() is always a?",
-    "OptionModel": [
-      {
-        "Id": 257,
-        "Answer": "int",
-        "Choice": false
-      },
-      {
-        "Id": 258,
-        "Answer": "string",
-        "Choice": false
-      },
-      {
-        "Id": 259,
-        "Answer": "boolean",
-        "Choice": false
-      },
-      {
-        "Id": 260,
-        "Answer": "void",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  },
-  {
-    "Id": 68,
-    "Question": "A partial class allows?",
-    "OptionModel": [
-      {
-        "Id": 261,
-        "Answer": "Implementation of a single class in multiple .cs files",
-        "Choice": false
-      },
-      {
-        "Id": 262,
-        "Answer": "Declaration of multiple classes in a single .cs file",
-        "Choice": false
-      },
-      {
-        "Id": 263,
-        "Answer": "Implementation of multiple interfaces to single class",
-        "Choice": false
-      },
-      {
-        "Id": 264,
-        "Answer": "Multiple class inheritance",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 70,
-    "Question": "LINQ stands for?",
-    "OptionModel": [
-      {
-        "Id": 265,
-        "Answer": "Language Intergrated Query",
-        "Choice": false
-      },
-      {
-        "Id": 266,
-        "Answer": "Local Intergration Query",
-        "Choice": false
-      },
-      {
-        "Id": 267,
-        "Answer": "Language Included Query",
-        "Choice": false
-      },
-      {
-        "Id": 268,
-        "Answer": "Lazy Intergrated Query",
-        "Choice": false
-      }
-    ],
-    "Answer": 0
-  },
-  {
-    "Id": 71,
-    "Question": "Data type of a variable declared using var will be assigned at?",
-    "OptionModel": [
-      {
-        "Id": 269,
-        "Answer": "Runtime",
-        "Choice": false
-      },
-      {
-        "Id": 270,
-        "Answer": "Compile time",
-        "Choice": false
-      },
-      {
-        "Id": 271,
-        "Answer": "CLR time",
-        "Choice": false
-      },
-      {
-        "Id": 272,
-        "Answer": "Application Initialization time",
-        "Choice": false
-      }
-    ],
-    "Answer": 1
-  },
-  {
-    "Id": 72,
-    "Question": "Which of the following is true for dynamic type in C#?",
-    "OptionModel": [
-      {
-        "Id": 273,
-        "Answer": "It allows multiple time declaration of a variable",
-        "Choice": false
-      },
-      {
-        "Id": 274,
-        "Answer": "It allows compile time type checking",
-        "Choice": false
-      },
-      {
-        "Id": 275,
-        "Answer": "It escapes compile time type checking",
-        "Choice": false
-      },
-      {
-        "Id": 276,
-        "Answer": "None of the above",
-        "Choice": false
-      }
-    ],
-    "Answer": 2
-  }
+    {
+        "Question": "In which of these situations are interfaces better than abstract classes?",
+        "OptionModel": [
+            {
+                "Answer": "When you need to define an object type's characteristics, use an interface. When you need to define an object type's capabilities, use an abstract class.",
+                "Choice": false
+            },
+            {
+                "Answer": "Interfaces are a legacy of older versions of C#, and are interchangeable with the newer abstract class feature.",
+                "Choice": false
+            },
+            {
+                "Answer": "When you need a list of capabilities and data that are classes-agnostic, use an interface. When you need a certain object type to share characteristics, use an abstract class.",
+                "Choice": false
+            },
+            {
+                "Answer": " You should use both an interface and an abstract class when defining any\r\ncomplex object.",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "Which statement is true of delegates?",
+        "OptionModel": [
+            {
+                "Answer": "Delegates are not supported in the current version of C#",
+                "Choice": false
+            },
+            {
+                "Answer": "They cannot be used as callbacks.",
+                "Choice": false
+            },
+            {
+                "Answer": "Only variables can be passed to delegates as parameters",
+                "Choice": false
+            },
+            {
+                "Answer": "They can be chained together.",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "Which choice best defines C#'s asynchronous programming model?",
+        "OptionModel": [
+            {
+                "Answer": "reactive",
+                "Choice": false
+            },
+            {
+                "Answer": "inherited callback",
+                "Choice": false
+            },
+            {
+                "Answer": "task-based",
+                "Choice": false
+            },
+            {
+                "Answer": "callback-based",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How would you determine if a class has a particular attribute?",
+        "OptionModel": [
+            {
+                "Answer": "var type = typeof(SomeType);\nvar attribute = type.GetCustomAttribute<SomeAttribute>();\n",
+                "Choice": false
+            },
+            {
+                "Answer": "var typeof(MyPresentationModel).Should().BeDecoratedWith<SomeAttribute>();",
+                "Choice": false
+            },
+            {
+                "Answer": "Attribute.GetCustomAttribute, typeof(SubControllerActionToViewDataAttribute);",
+                "Choice": false
+            },
+            {
+                "Answer": "Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute));",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What is the difference between the ref and out keywords?",
+        "OptionModel": [
+            {
+                "Answer": "Variables passed to out specify that the parameter is an output parameter, while ref specifies that a variable may be passed to a function without being initialized.",
+                "Choice": false
+            },
+            {
+                "Answer": "Variables passed to ref can be passed to a function without being initialized, while out specifies that the value is a reference value that can be changed inside the calling method.",
+                "Choice": false
+            },
+            {
+                "Answer": "Variables passed to out can be passed to a function without being initialized, while ref specifies that the value is a reference value that can be changed inside the calling method.",
+                "Choice": false
+            },
+            {
+                "Answer": "Variables passed to ref specify that the parameter is an output parameter, while out specifies that a variable may be passed to a function without being initialized.",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How could you retrieve information about a class, as well as create an instance at runtime?",
+        "OptionModel": [
+            {
+                "Answer": "reflection",
+                "Choice": false
+            },
+            {
+                "Answer": "serialization",
+                "Choice": false
+            },
+            {
+                "Answer": "abstraction",
+                "Choice": false
+            },
+            {
+                "Answer": "dependency injection",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "What is this code an example of?\r\n \r\n\tprivate static object objA;\r\n\tprivate static object objB;\r\n\r\n\tprivate static void performTaskA()\r\n\t{\r\n\t\tlock (obj)\r\n\t\t{\r\n\t\t\tThread.Sleep(1000);\r\n\t\t\tlock (objA) { }\r\n\t\t}\r\n\t}\r\n\r\n\tprivate static void PerformTaskB()\r\n\t{\r\n\t\tlock (objA)\r\n\t\t{\r\n\t\t\tlock (objB) { }\r\n\t\t}\r\n\t}",
+        "OptionModel": [
+            {
+                "Answer": "a private class that uses multithreading",
+                "Choice": false
+            },
+            {
+                "Answer": "multithread coding",
+                "Choice": false
+            },
+            {
+                "Answer": "thread mismanagement",
+                "Choice": false
+            },
+            {
+                "Answer": "a potential deadlock",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What is the difference between an anonymous type and a regular data type?",
+        "OptionModel": [
+            {
+                "Answer": "Anonymous types don't have type names",
+                "Choice": false
+            },
+            {
+                "Answer": "Anonymous types can only be static",
+                "Choice": false
+            },
+            {
+                "Answer": "Anonymous types can be used only in struts",
+                "Choice": false
+            },
+            {
+                "Answer": "Anonymous types don't work with LINQ.",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "When would you use a Dictionary rather that an Array type in your application?",
+        "OptionModel": [
+            {
+                "Answer": "when you need a jagged collection structure",
+                "Choice": false
+            },
+            {
+                "Answer": "when you need to store values of the same type",
+                "Choice": false
+            },
+            {
+                "Answer": "when you need to store key-value pairs rather than single values",
+                "Choice": false
+            },
+            {
+                "Answer": "when you need an ordered, searchable list",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the difference between a.Equals(b) and a == b?",
+        "OptionModel": [
+            {
+                "Answer": "The .Equals method compares reference identities while the == compares contents.",
+                "Choice": false
+            },
+            {
+                "Answer": "The .Equals method compares primitive values while == compares all values.",
+                "Choice": false
+            },
+            {
+                "Answer": "The .Equals method compares contents while == compares references reference identity.",
+                "Choice": false
+            },
+            {
+                "Answer": "The .Equals method compares reference type while == compares primitive value types.",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "Which choice best describes a deadlock situation?",
+        "OptionModel": [
+            {
+                "Answer": "when you try to instantiate two objects at the same time in the same class or struct",
+                "Choice": false
+            },
+            {
+                "Answer": "when you are trying to execute an action after a user event is registered",
+                "Choice": false
+            },
+            {
+                "Answer": "when simultaneous instructions are waiting on each other to finish before executing",
+                "Choice": false
+            },
+            {
+                "Answer": "when you try to execute a series of events simultaneously on multiple threads",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How does the async keyword work?",
+        "OptionModel": [
+            {
+                "Answer": "It allows access to asynchronous methods in the C# API",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows thread pooling and synchronous processes in static classes.",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows the await keyword to be used in a method",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows access to synchronous methods in the C# API",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is an object in C#?",
+        "OptionModel": [
+            {
+                "Answer": "a class or struct, including its variables and functions",
+                "Choice": false
+            },
+            {
+                "Answer": "a primitive data type that can be created only at compile time",
+                "Choice": false
+            },
+            {
+                "Answer": "a value type that can be used only with an abstract class",
+                "Choice": false
+            },
+            {
+                "Answer": "an instance of a class or struct that includes fields, properties, and/or methods",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "Which code snippet declares an anonymous type named usedData?",
+        "OptionModel": [
+            {
+                "Answer": "var userData = new UserData(\"John\", 32 );",
+                "Choice": false
+            },
+            {
+                "Answer": "var userData = new { name = \"John\", age = 32 };",
+                "Choice": false
+            },
+            {
+                "Answer": "AType userData = new AType { name = \"John\", age = 32 };",
+                "Choice": false
+            },
+            {
+                "Answer": "Anonymous userData = new Anonymous { name = \"John\", age = 32 };",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "What will be returned when this method is executed?\n public void userInput(string charParamters) { }",
+        "OptionModel": [
+            {
+                "Answer": "nothing",
+                "Choice": false
+            },
+            {
+                "Answer": "a Boolean",
+                "Choice": false
+            },
+            {
+                "Answer": "a string variable",
+                "Choice": false
+            },
+            {
+                "Answer": "an integer",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "What is stored on the Heap?",
+        "OptionModel": [
+            {
+                "Answer": "int",
+                "Choice": false
+            },
+            {
+                "Answer": "enum",
+                "Choice": false
+            },
+            {
+                "Answer": "reference type",
+                "Choice": false
+            },
+            {
+                "Answer": "long",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "In what order would the employee names in this example be printed to the console?\r\n\r\n string[] employees = { \"Joe\", \"Bob\", \"Carol\", \"Alice\", \"Will\" }; \r\n IEnumerable<string> employeeQuery = from person in employees orderby person select person;\r\n foreach(string employee in employeeQuery) \r\n {  \r\n\tConsole.WriteLine(employee);  \r\n }",
+        "OptionModel": [
+            {
+                "Answer": "ascending",
+                "Choice": false
+            },
+            {
+                "Answer": "unordered",
+                "Choice": false
+            },
+            {
+                "Answer": "descending",
+                "Choice": false
+            },
+            {
+                "Answer": "first in, first out",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Lambda expressions are often used in tandem with which of the following?",
+        "OptionModel": [
+            {
+                "Answer": "Namespaces",
+                "Choice": false
+            },
+            {
+                "Answer": "LINQ",
+                "Choice": false
+            },
+            {
+                "Answer": "Type Aliasing",
+                "Choice": false
+            },
+            {
+                "Answer": "Assemblies",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "What is the correct formatting for single line and multiline comments?",
+        "OptionModel": [
+            {
+                "Answer": "// - Single Line / - Multiline",
+                "Choice": false
+            },
+            {
+                "Answer": "// Multiline /_ Single Line _/",
+                "Choice": false
+            },
+            {
+                "Answer": "//* Multiline / Single Line",
+                "Choice": false
+            },
+            {
+                "Answer": "// Single Line /* Multiline */",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "How do you make a method in an abstract class overridable?",
+        "OptionModel": [
+            {
+                "Answer": "Make it public",
+                "Choice": false
+            },
+            {
+                "Answer": "Make it static",
+                "Choice": false
+            },
+            {
+                "Answer": "Make it private",
+                "Choice": false
+            },
+            {
+                "Answer": "Make it virtual",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "How would you write code for an integer property called Age with a getter and setter?",
+        "OptionModel": [
+            {
+                "Answer": "public int Age { get - set }",
+                "Choice": false
+            },
+            {
+                "Answer": "public int Age: get set;",
+                "Choice": false
+            },
+            {
+                "Answer": "public int Age (get, set );",
+                "Choice": false
+            },
+            {
+                "Answer": "public int Age { get; set; }",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What is an abstract class?",
+        "OptionModel": [
+            {
+                "Answer": "a class that is denoted by the class keyword (can be seen and used by any other class in the system--thus it is by default public)",
+                "Choice": false
+            },
+            {
+                "Answer": "something denoted by the abstract keyword and used system wide; if you want any program to create an object of a class you use the abstract class",
+                "Choice": false
+            },
+            {
+                "Answer": "a class that is denoted by the virtual keyword",
+                "Choice": false
+            },
+            {
+                "Answer": "a class that can be used only as base class",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "When using a thread pool what happens to a given thread after it finishes its task?",
+        "OptionModel": [
+            {
+                "Answer": "The thread is destroyed and memory is freed up.",
+                "Choice": false
+            },
+            {
+                "Answer": "The thread runs in loop until the next assignment.",
+                "Choice": false
+            },
+            {
+                "Answer": "The thread goes inactive in the background and waits for garbage collection.",
+                "Choice": false
+            },
+            {
+                "Answer": "The thread returns to the pool for reuse.",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "Which choice represents a class that inherits behavior from a base class?",
+        "OptionModel": [
+            {
+                "Answer": "a second base class",
+                "Choice": false
+            },
+            {
+                "Answer": "a revised class",
+                "Choice": false
+            },
+            {
+                "Answer": "a derived class",
+                "Choice": false
+            },
+            {
+                "Answer": "a parent class",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What does operator overloading allow you to do?",
+        "OptionModel": [
+            {
+                "Answer": "hide built-in operatores when necessary",
+                "Choice": false
+            },
+            {
+                "Answer": "add methods to be interpreted by the compiler at runtime",
+                "Choice": false
+            },
+            {
+                "Answer": "define how enums and other primitive value types work within the rest of the application",
+                "Choice": false
+            },
+            {
+                "Answer": "define custom functionality for common operators like addition and equality",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What it the main purpose of LINQ?",
+        "OptionModel": [
+            {
+                "Answer": "to delete duplicate data",
+                "Choice": false
+            },
+            {
+                "Answer": "ti bind namespaces and assemblies",
+                "Choice": false
+            },
+            {
+                "Answer": "to query and transform data",
+                "Choice": false
+            },
+            {
+                "Answer": "to connect assemblies",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the correct syntax for a new generic list of strings named contacts?",
+        "OptionModel": [
+            {
+                "Answer": "public List contact = new List();",
+                "Choice": false
+            },
+            {
+                "Answer": "public List(string names) contacts = new List(string names)();",
+                "Choice": false
+            },
+            {
+                "Answer": "var contacts = new List();",
+                "Choice": false
+            },
+            {
+                "Answer": "var contacts = new List(string);",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the difference between throw exceptions and throw clauses?",
+        "OptionModel": [
+            {
+                "Answer": "Throw clauses fire only at runtime, while throw exceptions can fire at any time.",
+                "Choice": false
+            },
+            {
+                "Answer": "Throw exceptions overwrite the stack trace, while throw clauses retain the stack information.",
+                "Choice": false
+            },
+            {
+                "Answer": "Throw clauses overwrite the stack trace, while throw exceptions retain the stack information.",
+                "Choice": false
+            },
+            {
+                "Answer": "Throw exceptions fire only at runtime, while throw clauses can fire during compile",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "When an asynchronous method is executed, the code runs but nothing happens other than a compiler warning. What is most likely causing the method to not return anything?",
+        "OptionModel": [
+            {
+                "Answer": "The return yield statement is missing at the end of the method.",
+                "Choice": false
+            },
+            {
+                "Answer": "The method is missing an await keyword in its body.",
+                "Choice": false
+            },
+            {
+                "Answer": "The wait keyword is missing from the end of the method.",
+                "Choice": false
+            },
+            {
+                "Answer": "The yield keyword is missing from the method.",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "What are C# events?",
+        "OptionModel": [
+            {
+                "Answer": " system actions that communicate directly with the compiler at runtime",
+                "Choice": false
+            },
+            {
+                "Answer": "actions that execute when the code compiles, generating logs and test output",
+                "Choice": false
+            },
+            {
+                "Answer": "actions that generate notifications, which are sent to their registered listeners** <= Correct",
+                "Choice": false
+            },
+            {
+                "Answer": "user-only methods that send data to the application's back end",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What kind of values can arrays store?",
+        "OptionModel": [
+            {
+                "Answer": "unordered collections of numerc values",
+                "Choice": false
+            },
+            {
+                "Answer": "key-value pairs of any C# supported type",
+                "Choice": false
+            },
+            {
+                "Answer": "class and struct instances",
+                "Choice": false
+            },
+            {
+                "Answer": "multiple variables, or collections, of the same type",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "Given this enumeration, how would you access the integer-type value of 'AppState.Loading'?\n enum AppState { OffLine, Loading, Ready }",
+        "OptionModel": [
+            {
+                "Answer": "string currentState = (string)AppState.Loading;",
+                "Choice": false
+            },
+            {
+                "Answer": "string currentState = AppState.Loading.integralVal;",
+                "Choice": false
+            },
+            {
+                "Answer": "int currentState = AppState.Loading.rawValue;",
+                "Choice": false
+            },
+            {
+                "Answer": "int currentState = (int)AppState.Loading;",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What character would you use to start a regular expression pattern at a word boundary?",
+        "OptionModel": [
+            {
+                "Answer": "d",
+                "Choice": false
+            },
+            {
+                "Answer": "\\a",
+                "Choice": false
+            },
+            {
+                "Answer": "\\b",
+                "Choice": false
+            },
+            {
+                "Answer": "\\w",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "To conform to the following interface, which of its members need to be\r\nimplemented?\r\n\r\n\tpublic interface INameble\r\n\t{\r\n\t\tstring FirstName { get; set; }\r\n\t\tstring LastName { get; }\r\n\t}",
+        "OptionModel": [
+            {
+                "Answer": "Both the FirstName and LastName properties need to be implemented.",
+                "Choice": false
+            },
+            {
+                "Answer": "Neither, they are both optional.",
+                "Choice": false
+            },
+            {
+                "Answer": "Only the LastName property needs to be implemented.",
+                "Choice": false
+            },
+            {
+                "Answer": "Only the FirstName property needs to be implemented.",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "You're dealing with multiple assemblies in your program, but are worried about memory allocation. At what point in the program life cycle are assemblies loaded into memory?",
+        "OptionModel": [
+            {
+                "Answer": "at runtime",
+                "Choice": false
+            },
+            {
+                "Answer": "at compile time",
+                "Choice": false
+            },
+            {
+                "Answer": "only when required",
+                "Choice": false
+            },
+            {
+                "Answer": "only when programmatically loaded",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is most accurate description of a regular expression?",
+        "OptionModel": [
+            {
+                "Answer": "A regular expression is a C# tool used to parse HTML",
+                "Choice": false
+            },
+            {
+                "Answer": "A regular expression is a special text string for describing a search patters.",
+                "Choice": false
+            },
+            {
+                "Answer": "A regular expression allows a variable to be passed by reference.",
+                "Choice": false
+            },
+            {
+                "Answer": "A regular expression allows a class to conform to the Equatable protocol.",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Why would you use a class field in C#",
+        "OptionModel": [
+            {
+                "Answer": "To define behaviours of the class",
+                "Choice": false
+            },
+            {
+                "Answer": "To hold information and data contained in the class object",
+                "Choice": false
+            },
+            {
+                "Answer": "To communicate between classes and object",
+                "Choice": false
+            },
+            {
+                "Answer": "To store the class definition value",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "When would you use generics in your code?",
+        "OptionModel": [
+            {
+                "Answer": "to increase code performance",
+                "Choice": false
+            },
+            {
+                "Answer": "all of these answers",
+                "Choice": false
+            },
+            {
+                "Answer": "when code reuse is a priority",
+                "Choice": false
+            },
+            {
+                "Answer": "when type safety is important",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "What prints to the console when this code is executed?\r\n\r\n\tpublic delegate void AuthCallback(bool validUser);\r\n\tpublic static AuthCallback loginCallback : Login;\r\n\t\r\n\tpublic static void Login()\r\n\t{\r\n\t\tConsole.WriteLine(\"Valid user!\");\r\n\t}\r\n\t\r\n\tpublic static void Main(string[] args) { loginCallback(true); }",
+        "OptionModel": [
+            {
+                "Answer": "Login successful...",
+                "Choice": false
+            },
+            {
+                "Answer": "Valid user!",
+                "Choice": false
+            },
+            {
+                "Answer": "an error, because the method signature of Login doesn't match the delegate. It will throw an error because you cant apply Inheritance to methods that way.",
+                "Choice": false
+            },
+            {
+                "Answer": "Login successful... Valid user!",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How would you declare a sealed class named User?",
+        "OptionModel": [
+            {
+                "Answer": "public class User",
+                "Choice": false
+            },
+            {
+                "Answer": "abstract User {}",
+                "Choice": false
+            },
+            {
+                "Answer": "sealed class User",
+                "Choice": false
+            },
+            {
+                "Answer": "private sealed class User",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How would you write a delegeate named ResultCallback with an int parameter named responseCode?",
+        "OptionModel": [
+            {
+                "Answer": "public delegate void ResultCallback<(int) responseCode> ;",
+                "Choice": false
+            },
+            {
+                "Answer": "public delegate ResultCallback(int responseCode) ;",
+                "Choice": false
+            },
+            {
+                "Answer": "public delegate void ResultCallback(int responseCode) ;",
+                "Choice": false
+            },
+            {
+                "Answer": "public void delegate ResultCallback<int responseCode> ;",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the difference between non-static and static classes?",
+        "OptionModel": [
+            {
+                "Answer": "non-static classes need to be initialized before use, while static classes do not reference",
+                "Choice": false
+            },
+            {
+                "Answer": " non-static classes are accessible only from an interface while static classes are accessible from anywhere",
+                "Choice": false
+            },
+            {
+                "Answer": "non-static classes need to initialize all class members at runtime, while static classes do not",
+                "Choice": false
+            },
+            {
+                "Answer": "non-static classes do not need to be initialized while static classes do",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Which characteristic prevents this code from compiling?\n public int age=\"28\"",
+        "OptionModel": [
+            {
+                "Answer": "type safety",
+                "Choice": false
+            },
+            {
+                "Answer": "single inheritance",
+                "Choice": false
+            },
+            {
+                "Answer": "dependency injection",
+                "Choice": false
+            },
+            {
+                "Answer": "multiple inheritance",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "How would you serialize this class?\n public class User {}",
+        "OptionModel": [
+            {
+                "Answer": "mark the User class with the DeserializableAttribute",
+                "Choice": false
+            },
+            {
+                "Answer": "Declare it as public serializable class User {}",
+                "Choice": false
+            },
+            {
+                "Answer": "Mark it with the SerializableAttribute",
+                "Choice": false
+            },
+            {
+                "Answer": "Declare it as private serializable class User{}",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How would you write a delegate named ResultCallback with an int parameter named responseCode",
+        "OptionModel": [
+            {
+                "Answer": "public delegate ResultCallback(int responseCode)",
+                "Choice": false
+            },
+            {
+                "Answer": "public delegate void ResultCallback<(int) responseCode>;",
+                "Choice": false
+            },
+            {
+                "Answer": "public void delegate ResultCallback;",
+                "Choice": false
+            },
+            {
+                "Answer": "public delegate void ResultCallback(int responseCode);",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What is the difference between a static and non-static method?",
+        "OptionModel": [
+            {
+                "Answer": "non-static methods always need to have a void return type",
+                "Choice": false
+            },
+            {
+                "Answer": "non-static methods do not have access to static member variables",
+                "Choice": false
+            },
+            {
+                "Answer": "static methods do not have to instantiate an instance of the class to call the method",
+                "Choice": false
+            },
+            {
+                "Answer": "static methods always have to be public",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the correct way to write an event named apiResult based on a delegate named ResultCallback?",
+        "OptionModel": [
+            {
+                "Answer": "public void event ResultCallback apiResult;",
+                "Choice": false
+            },
+            {
+                "Answer": "public event ResultCallback(() -> apiResult);",
+                "Choice": false
+            },
+            {
+                "Answer": "public event void ResultCallback",
+                "Choice": false
+            },
+            {
+                "Answer": "public event ResultCallback apiResult;",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "When will the code inside finally block be executed in a try-catch statement?",
+        "OptionModel": [
+            {
+                "Answer": "if there is an error, it won't execute at all",
+                "Choice": false
+            },
+            {
+                "Answer": "between the try and catch blocks",
+                "Choice": false
+            },
+            {
+                "Answer": "after the try and catch blocks",
+                "Choice": false
+            },
+            {
+                "Answer": "when the finally block overrides the catch block and executes in its place",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What method correctly extends the string class?",
+        "OptionModel": [
+            {
+                "Answer": "public static string IsvalidName(this string i, string value) {}",
+                "Choice": false
+            },
+            {
+                "Answer": "public static void IsvalidName(this string i, string value) {}",
+                "Choice": false
+            },
+            {
+                "Answer": "public string IsvalidName(this string i, string value) {}",
+                "Choice": false
+            },
+            {
+                "Answer": "public void IsvalidName(this string i, string value) {}",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "C# class can inherit multiple?",
+        "OptionModel": [
+            {
+                "Answer": "Classes",
+                "Choice": false
+            },
+            {
+                "Answer": "Interfaces",
+                "Choice": false
+            },
+            {
+                "Answer": "Abstract Classes",
+                "Choice": false
+            },
+            {
+                "Answer": "Static Classes",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Which of following are value types in C#?",
+        "OptionModel": [
+            {
+                "Answer": "Int32",
+                "Choice": false
+            },
+            {
+                "Answer": "Double",
+                "Choice": false
+            },
+            {
+                "Answer": "Decimal",
+                "Choice": false
+            },
+            {
+                "Answer": "All of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "Which of the following is a reference type in C#",
+        "OptionModel": [
+            {
+                "Answer": "String",
+                "Choice": false
+            },
+            {
+                "Answer": "Long",
+                "Choice": false
+            },
+            {
+                "Answer": "Boolean",
+                "Choice": false
+            },
+            {
+                "Answer": "None of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "What is a nullable type?",
+        "OptionModel": [
+            {
+                "Answer": "It allows assignment of null to reference type",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows assignment of null to value type",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows assignment of null to static class",
+                "Choice": false
+            },
+            {
+                "Answer": "None of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Struct is a?",
+        "OptionModel": [
+            {
+                "Answer": "Reference type",
+                "Choice": false
+            },
+            {
+                "Answer": "Value type",
+                "Choice": false
+            },
+            {
+                "Answer": "Class type",
+                "Choice": false
+            },
+            {
+                "Answer": "String type",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "10 > 9 ? \"10 is greater than 9\" : \"9 is greater than 10\" is an example of?",
+        "OptionModel": [
+            {
+                "Answer": "Ternary operator",
+                "Choice": false
+            },
+            {
+                "Answer": "Conditional operator",
+                "Choice": false
+            },
+            {
+                "Answer": "Greater than operator",
+                "Choice": false
+            },
+            {
+                "Answer": "Inverse operator",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Which of the following datatype can be used with enum?",
+        "OptionModel": [
+            {
+                "Answer": "int",
+                "Choice": false
+            },
+            {
+                "Answer": "string",
+                "Choice": false
+            },
+            {
+                "Answer": "boolean",
+                "Choice": false
+            },
+            {
+                "Answer": "All of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "What is a indexer?",
+        "OptionModel": [
+            {
+                "Answer": "It allows an instance of a class to be indexed like an array",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows enumerator with class",
+                "Choice": false
+            },
+            {
+                "Answer": "It creates index for instances of a class",
+                "Choice": false
+            },
+            {
+                "Answer": "None of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "String data type is?",
+        "OptionModel": [
+            {
+                "Answer": "Mutable",
+                "Choice": false
+            },
+            {
+                "Answer": "Immutable",
+                "Choice": false
+            },
+            {
+                "Answer": "Static",
+                "Choice": false
+            },
+            {
+                "Answer": "Value type",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "An array in C# starts with ___ index.",
+        "OptionModel": [
+            {
+                "Answer": "1",
+                "Choice": false
+            },
+            {
+                "Answer": "0",
+                "Choice": false
+            },
+            {
+                "Answer": "-1",
+                "Choice": false
+            },
+            {
+                "Answer": "None of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Which of the following is the right way of declaring an array?",
+        "OptionModel": [
+            {
+                "Answer": "int[] intArray = newint[];",
+                "Choice": false
+            },
+            {
+                "Answer": "int intArray[] = new int[5];",
+                "Choice": false
+            },
+            {
+                "Answer": "int[] intArray = new it[5];",
+                "Choice": false
+            },
+            {
+                "Answer": "int[5] intArray = new int[];",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "Which of the following is true for Readonly variables?",
+        "OptionModel": [
+            {
+                "Answer": "Value will be assigned at runtime",
+                "Choice": false
+            },
+            {
+                "Answer": "Value will be assigned at compile time",
+                "Choice": false
+            },
+            {
+                "Answer": "Value will be assigned when it accessed first time",
+                "Choice": false
+            },
+            {
+                "Answer": "None of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Which of the following statement is true?",
+        "OptionModel": [
+            {
+                "Answer": "try block must be followed by catch or finally block or both",
+                "Choice": false
+            },
+            {
+                "Answer": "finally block cannot include a return statement",
+                "Choice": false
+            },
+            {
+                "Answer": "try block can include another try block",
+                "Choice": false
+            },
+            {
+                "Answer": "All of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "Which of the following statement is true?",
+        "OptionModel": [
+            {
+                "Answer": "A finally block may not execute every time",
+                "Choice": false
+            },
+            {
+                "Answer": "A  return or break statement cannot exit a finally block",
+                "Choice": false
+            },
+            {
+                "Answer": "A finally block can come before catch block",
+                "Choice": false
+            },
+            {
+                "Answer": "Multiple finally block is possible",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Func and Action are the types of?",
+        "OptionModel": [
+            {
+                "Answer": "Utility function",
+                "Choice": false
+            },
+            {
+                "Answer": "Delegate",
+                "Choice": false
+            },
+            {
+                "Answer": "Event",
+                "Choice": false
+            },
+            {
+                "Answer": "Generic class",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Return type of Predicate<T>() is always a?",
+        "OptionModel": [
+            {
+                "Answer": "int",
+                "Choice": false
+            },
+            {
+                "Answer": "string",
+                "Choice": false
+            },
+            {
+                "Answer": "boolean",
+                "Choice": false
+            },
+            {
+                "Answer": "void",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "A partial class allows?",
+        "OptionModel": [
+            {
+                "Answer": "Implementation of a single class in multiple .cs files",
+                "Choice": false
+            },
+            {
+                "Answer": "Declaration of multiple classes in a single .cs file",
+                "Choice": false
+            },
+            {
+                "Answer": "Implementation of multiple interfaces to single class",
+                "Choice": false
+            },
+            {
+                "Answer": "Multiple class inheritance",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "LINQ stands for?",
+        "OptionModel": [
+            {
+                "Answer": "Language Intergrated Query",
+                "Choice": false
+            },
+            {
+                "Answer": "Local Intergration Query",
+                "Choice": false
+            },
+            {
+                "Answer": "Language Included Query",
+                "Choice": false
+            },
+            {
+                "Answer": "Lazy Intergrated Query",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Data type of a variable declared using var will be assigned at?",
+        "OptionModel": [
+            {
+                "Answer": "Runtime",
+                "Choice": false
+            },
+            {
+                "Answer": "Compile time",
+                "Choice": false
+            },
+            {
+                "Answer": "CLR time",
+                "Choice": false
+            },
+            {
+                "Answer": "Application Initialization time",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Which of the following is true for dynamic type in C#?",
+        "OptionModel": [
+            {
+                "Answer": "It allows multiple time declaration of a variable",
+                "Choice": false
+            },
+            {
+                "Answer": "It allows compile time type checking",
+                "Choice": false
+            },
+            {
+                "Answer": "It escapes compile time type checking",
+                "Choice": false
+            },
+            {
+                "Answer": "None of the above",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is a correct syntax to output \"Hello World\" in C#?",
+        "OptionModel": [
+            {
+                "Answer": "Console.WriteLine(\"Hello World\"); ",
+                "Choice": false
+            },
+            {
+                "Answer": "System.out.println(\"Hello World\");",
+                "Choice": false
+            },
+            {
+                "Answer": "cout << \"Hello World\";",
+                "Choice": false
+            },
+            {
+                "Answer": "print (\"Hello World\");",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "C# is an alias of C++ ?",
+        "OptionModel": [
+            {
+                "Answer": "True",
+                "Choice": false
+            },
+            {
+                "Answer": "False",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "How do you insert COMMENTS in C# code?",
+        "OptionModel": [
+            {
+                "Answer": " # This is a comment",
+                "Choice": false
+            },
+            {
+                "Answer": "// This is a comment  ",
+                "Choice": false
+            },
+            {
+                "Answer": "/* This is a comment",
+                "Choice": false
+            },
+            {
+                "Answer": "\\\\ This is a coment",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Which data type is used to create a variable that should store text?",
+        "OptionModel": [
+            {
+                "Answer": "myString",
+                "Choice": false
+            },
+            {
+                "Answer": "str",
+                "Choice": false
+            },
+            {
+                "Answer": "string",
+                "Choice": false
+            },
+            {
+                "Answer": "txt",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "How do you create a variable with the numeric value 5?",
+        "OptionModel": [
+            {
+                "Answer": "int x = 5;  ",
+                "Choice": false
+            },
+            {
+                "Answer": "x = 5;",
+                "Choice": false
+            },
+            {
+                "Answer": "double x = 5;",
+                "Choice": false
+            },
+            {
+                "Answer": "num x = 5",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "How do you create a variable with the floating number 2.8?",
+        "OptionModel": [
+            {
+                "Answer": "int x = 2.8;",
+                "Choice": false
+            },
+            {
+                "Answer": "byte x = 2.8;",
+                "Choice": false
+            },
+            {
+                "Answer": "int x = 2.8D;",
+                "Choice": false
+            },
+            {
+                "Answer": "double x = 2.8D;",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "Which property can be used to find the length of a string?",
+        "OptionModel": [
+            {
+                "Answer": "getLength()",
+                "Choice": false
+            },
+            {
+                "Answer": "Length ",
+                "Choice": false
+            },
+            {
+                "Answer": "length",
+                "Choice": false
+            },
+            {
+                "Answer": "length()",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "Which operator is used to add together two values?",
+        "OptionModel": [
+            {
+                "Answer": "The & sign",
+                "Choice": false
+            },
+            {
+                "Answer": "The * sign",
+                "Choice": false
+            },
+            {
+                "Answer": "The + sign",
+                "Choice": false
+            },
+            {
+                "Answer": "The - sign",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "The value of a string variable can be surrounded by single quotes?",
+        "OptionModel": [
+            {
+                "Answer": "True",
+                "Choice": false
+            },
+            {
+                "Answer": "False",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Type casting is when you assign a value of one data type to another type?",
+        "OptionModel": [
+            {
+                "Answer": "True",
+                "Choice": false
+            },
+            {
+                "Answer": "False",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "Which operator can be used to compare two values?",
+        "OptionModel": [
+            {
+                "Answer": "><",
+                "Choice": false
+            },
+            {
+                "Answer": "==",
+                "Choice": false
+            },
+            {
+                "Answer": "<>",
+                "Choice": false
+            },
+            {
+                "Answer": "=",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "To declare an array in C#, define the variable type with:",
+        "OptionModel": [
+            {
+                "Answer": "()",
+                "Choice": false
+            },
+            {
+                "Answer": "{}",
+                "Choice": false
+            },
+            {
+                "Answer": "[]",
+                "Choice": false
+            },
+            {
+                "Answer": "<>",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the correct way to create an object called myObj of MyClass?",
+        "OptionModel": [
+            {
+                "Answer": "class myObj = new MyClass();",
+                "Choice": false
+            },
+            {
+                "Answer": "class MyClass = new myObj();",
+                "Choice": false
+            },
+            {
+                "Answer": "new myObj = MyClass();",
+                "Choice": false
+            },
+            {
+                "Answer": "MyClass myObj = new MyClass();    ",
+                "Choice": false
+            }
+        ],
+        "Answer": 3
+    },
+    {
+        "Question": "What is the name of the 'special' class that represents a group of constants?",
+        "OptionModel": [
+            {
+                "Answer": "void",
+                "Choice": false
+            },
+            {
+                "Answer": "special",
+                "Choice": false
+            },
+            {
+                "Answer": "enum",
+                "Choice": false
+            },
+            {
+                "Answer": "const",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "Which statement is used to stop a loop?",
+        "OptionModel": [
+            {
+                "Answer": "return",
+                "Choice": false
+            },
+            {
+                "Answer": "break",
+                "Choice": false
+            },
+            {
+                "Answer": "stop",
+                "Choice": false
+            },
+            {
+                "Answer": "exit",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "What is a Tuple in C#?",
+        "OptionModel": [
+            {
+                "Answer": "a data structure that contains a sequence of elements of different data types.",
+                "Choice": false
+            },
+            {
+                "Answer": "a data structure that only allows elements of the same type.",
+                "Choice": false
+            },
+            {
+                "Answer": "an array that can contain only primitive data types.",
+                "Choice": false
+            },
+            {
+                "Answer": "a collection to store different variables in multiple locations.",
+                "Choice": false
+            }
+        ],
+        "Answer": 0
+    },
+    {
+        "Question": "What is the correct way to declare and initialize a tuple variable?",
+        "OptionModel": [
+            {
+                "Answer": "a list of objects that can be accessed by index.",
+                "Choice": false
+            },
+            {
+                "Answer": "[double, int]t1 = {4.5, 3};",
+                "Choice": false
+            },
+            {
+                "Answer": "<double, int>t1 = (4.5, 3);",
+                "Choice": false
+            },
+            {
+                "Answer": "(double, int) t1 = (4.5, 3);",
+                "Choice": false
+            },
+            {
+                "Answer": "Tuple(double, int) t1 = (1, 4.5);",
+                "Choice": false
+            }
+        ],
+        "Answer": 2
+    },
+    {
+        "Question": "What is the difference between Managed code vs Unmanaged code in C#?",
+        "OptionModel": [
+            {
+                "Answer": "Managed code is code that is clean and easy to read. Unmanaged code is messy and hard to understand",
+                "Choice": false
+            },
+            {
+                "Answer": "Managed code is a code whose execution is managed by Common Language Runtime, while Unmanaged code is not",
+                "Choice": false
+            },
+            {
+                "Answer": "Managed code is keeping your code into classes, methods and fields. Unmanaged code is keeping everything in a single .cs file",
+                "Choice": false
+            },
+            {
+                "Answer": "Managed code is using the safe keyword for classes and methods. Unmanaged code is run by default",
+                "Choice": false
+            }
+        ],
+        "Answer": 1
+    },
+    {
+        "Question": "In C# 7.3. What does the following 'is expression' do? \r\n\r\n\tif (input is int count)\r\n\t\tsum += count;",
+        "OptionModel": [
+            {
+                "Answer": "the code is checking to see if input is equal to count, if so, it adds to the sum",
+                "Choice": false
+            },
+            {
+                "Answer": "if input has the same address as count, if so, it will add to the sum",
+                "Choice": false
+            },
+            {
+                "Answer": "the code checks if input is the same type and value of count, if so, it adds to sum",
+                "Choice": false
+            },
+            {
+                "Answer": "the code checks if a variable is an int, and if so, adds it to the current sum",
+                "Choice": false
+            }
+        ],
+        "Answer": 4
+    }
 ]

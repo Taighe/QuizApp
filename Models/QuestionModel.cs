@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace QuizApp.Models
 {
     public class QuestionModel
     {
+        [JsonIgnore]
         public int Id { get; set; }
         public string Question { get; set; }
 
