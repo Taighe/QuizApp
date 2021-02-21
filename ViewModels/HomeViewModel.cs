@@ -1,4 +1,5 @@
 ﻿using QuizApp.Helpers;
+using QuizApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,15 @@ namespace QuizApp.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
+        public int NumberOfQuestions { get; set; }
         
         private ICommand m_startCommand;
+        private QuizModel m_quizModel;
+        public HomeViewModel()
+        {
+            m_quizModel = new QuizModel();
+        }
+
         public ICommand StartCommand
         {
             get
@@ -23,7 +31,7 @@ namespace QuizApp.ViewModels
 
         private void Start()
         {
-            
+            m_quizModel.StartQuiz(NumberOfQuestions);
         }
     }
 }

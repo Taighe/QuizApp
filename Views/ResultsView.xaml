@@ -26,8 +26,23 @@
         <ListBox ItemsSource="{Binding Questions}" Background="GhostWhite" Margin="15" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid >
+                        <Grid.Style>
+                            <Style TargetType="{x:Type Grid}">
+                                <Setter Property="Background" Value="GhostWhite"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding State}" Value="Correct">
+                                        <Setter Property="Background" Value="LawnGreen"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding State}" Value="Wrong">
+                                        <Setter Property="Background" Value="IndianRed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Style>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -40,6 +55,8 @@
                         <Label Grid.Column="1" Content="{Binding Question}"></Label>
                         <Label Grid.Column="2" Content="Answer: "></Label>
                         <Label Grid.Column="3" Content="{Binding Answer}"></Label>
+                        <Label Grid.Column="4" Content="Your Answer: "></Label>
+                        <Label Grid.Column="5" Content="{Binding YourAnswer}"></Label>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

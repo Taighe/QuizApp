@@ -16,14 +16,14 @@ namespace QuizApp.Data
         {
             m_context = context;
         }
-        public async Task<IEnumerable<QuestionModel>> GenerateQuiz(int number)
+        public List<QuestionModel> GenerateQuiz(int number)
         {
             List<QuestionModel> quiz = new List<QuestionModel>();
-            List<QuestionModel> allQuestions = await m_context.Questions.Include(q => q.OptionModel).ToListAsync();
+            List<QuestionModel> allQuestions = m_context.Questions.Include(q => q.OptionModel).ToList();
             for (int i = 0; i < number; i++)
             {
                 Random rand = new Random();
-                var pick = rand.Next(0, allQuestions.Count() - 1);
+                var pick = rand.Next(0, allQuestions.Count());
                 var question = allQuestions[pick];
                 quiz.Add(question);
                 allQuestions.Remove(question);
@@ -42,6 +42,17 @@ namespace QuizApp.Data
             var questions = m_context.Questions.Include(q => q.OptionModel).ToList();
             List<QuestionDto> list = new List<QuestionDto>();
             foreach(var question in questions)
+            {
+                list.Add(new QuestionDto(question));
+            }
+
+            return list;
+        }
+
+        public List<QuestionDto> GetQuestionsResults(IEnumerable<QuestionModel> questions)
+        {
+            List<QuestionDto> list = new List<QuestionDto>();
+            foreach (var question in questions)
             {
                 list.Add(new QuestionDto(question));
             }

@@ -51,7 +51,7 @@ namespace QuizApp.ViewModels
             }
         }
         private List<QuestionModel> m_quiz;
-        private QuizModel m_quizModel;
+
         private int m_questionIndex = 0;
         private ICommand m_homeCommand;
         public ICommand HomeCommand
@@ -74,9 +74,7 @@ namespace QuizApp.ViewModels
         public QuizViewModel()
         {
             Console.WriteLine("init");
-            m_quizModel = new QuizModel();
-            m_quizModel.StartQuiz(51);
-            m_quiz = m_quizModel.Quiz;
+            m_quiz = QuizModel.Quiz;
             OnPropertyChanged(nameof(Finish));
         }
 
@@ -87,7 +85,7 @@ namespace QuizApp.ViewModels
 
         protected void Next()
         {
-            m_quizModel.ScoreQuestion(m_quiz[m_questionIndex]);
+            QuizModel.ScoreQuestion(m_quiz[m_questionIndex]);
             m_questionIndex++;
             if(m_questionIndex < m_quiz.Count)
             {

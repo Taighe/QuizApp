@@ -23,18 +23,11 @@ namespace QuizApp.ViewModels
             }
         }
 
-        private IEnumerable<QuestionDto> m_questions;
         public IEnumerable<QuestionDto> Questions
         {
             get
             {
-                if(m_questions == null)
-                {
-                    QuizRepository repo = new QuizRepository(new DataContext());
-                    m_questions = repo.GetAllQuestionsResults();
-                }
-
-                return m_questions;
+                return new QuizRepository(new DataContext()).GetQuestionsResults(QuizModel.Quiz);
             }
         }
 
