@@ -32,9 +32,33 @@ namespace QuizApp.Data
             return quiz;
         }
 
+        public async Task<IEnumerable<QuestionModel>> GenerateQuizAsync(int number)
+        {
+            List<QuestionModel> quiz = new List<QuestionModel>();
+            List<QuestionModel> allQuestions = await m_context.Questions.Include(q => q.OptionModel).ToListAsync();
+            return await Task.Run(() =>
+            {
+                for (int i = 0; i < number; i++)
+                {
+                    Random rand = new Random();
+                    var pick = rand.Next(0, allQuestions.Count());
+                    var question = allQuestions[pick];
+                    quiz.Add(question);
+                    allQuestions.Remove(question);
+                }
+
+                return quiz;
+            });
+        }
+
         public List<QuestionModel> GetAllQuestions()
         {
             return m_context.Questions.Include(q => q.OptionModel).ToList();
+        }
+
+        public async Task<IEnumerable<QuestionModel>> GetAllQuestionsAsync()
+        {
+            return await m_context.Questions.Include(q => q.OptionModel).ToListAsync();
         }
 
         public List<QuestionDto> GetAllQuestionsResults()
@@ -49,6 +73,20 @@ namespace QuizApp.Data
             return list;
         }
 
+        public async Task<IEnumerable<QuestionDto>> GetAllQuestionsResultsAsync()
+        {
+            var questions = await m_context.Questions.Include(q => q.OptionModel).ToListAsync();
+            List<QuestionDto> list = new List<QuestionDto>();
+            return await Task.Run(() =>
+            {
+                foreach (var question in questions)
+                {
+                    list.Add(new QuestionDto(question));
+                }
+                return list;
+            });
+        }
+
         public List<QuestionDto> GetQuestionsResults(IEnumerable<QuestionModel> questions)
         {
             List<QuestionDto> list = new List<QuestionDto>();
@@ -58,6 +96,19 @@ namespace QuizApp.Data
             }
 
             return list;
+        }
+
+        public async Task<IEnumerable<QuestionDto>> GetQuestionsResultsAsync(IEnumerable<QuestionModel> questions)
+        {
+            List<QuestionDto> list = new List<QuestionDto>();
+            return await Task.Run(() =>
+            {
+                foreach (var question in questions)
+                {
+                    list.Add(new QuestionDto(question));
+                }
+                return list;
+            });
         }
     }
 }

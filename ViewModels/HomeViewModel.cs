@@ -12,7 +12,7 @@ namespace QuizApp.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        public int NumberOfQuestions { get; set; }
+        public static int NumberOfQuestions { get; set; }
         
         private ICommand m_startCommand;
         private QuizModel m_quizModel;
@@ -29,9 +29,10 @@ namespace QuizApp.ViewModels
             }
         }
 
-        private void Start()
+        public async Task Start()
         {
-            m_quizModel.StartQuiz(NumberOfQuestions);
+            if (await m_quizModel.StartQuizAsync(NumberOfQuestions))
+                Console.WriteLine("Quiz has started!");
         }
     }
 }

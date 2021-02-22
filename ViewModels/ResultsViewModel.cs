@@ -27,7 +27,13 @@ namespace QuizApp.ViewModels
         {
             get
             {
-                return new QuizRepository(new DataContext()).GetQuestionsResults(QuizModel.Quiz);
+                var dataContext = new DataContext();
+                if (QuizModel.Quiz == null)
+                {
+                    return Task.Run(async() => { return await new QuizRepository(dataContext).GetAllQuestionsResultsAsync();}).Result;
+                }
+
+                return Task.Run(async () => { return await new QuizRepository(dataContext).GetQuestionsResultsAsync(QuizModel.Quiz); }).Result;
             }
         }
 
@@ -60,13 +66,18 @@ namespace QuizApp.ViewModels
             Console.WriteLine("You pressed Home Command");
         }
 
-        protected void Copy()
-        {
-            string copy = "";
-            foreach(var question in Questions)
+        protected async void Copy()
+        {            
+            var questions = Questions;
+            string copy = await Task.Run(() => 
             {
-                copy += "Question: " + question.Question + " Answer: " + question.Answer + "\n";
-            }
+                var results = "";
+                foreach (var question in questions)
+                {
+                    results += "Question: " + question.Question + " Answer: " + question.Answer + "\n";
+                }
+                return results;
+            });
 
             Clipboard.SetText(copy, TextDataFormat.Text);
         }

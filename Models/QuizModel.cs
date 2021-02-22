@@ -11,38 +11,23 @@ namespace QuizApp.Models
     {
         public static int Score { get; private set; }
         public static int Count { get; private set; }
-        private static List<QuestionModel> m_quiz;
-        public static List<QuestionModel> Quiz
-        { 
-            get
-            {
-                if(m_quiz == null)
-                {
-                    if(m_questionDB == null)
-                    {
-                        var repo = new QuizRepository(new DataContext());
-                        m_questionDB = repo.GetAllQuestions();
-                    }
+        public static List<QuestionModel> Quiz { get; private set; }
 
-                    return m_questionDB;
-                }
-
-                return m_quiz;
-            }
-        }
-        private static List<QuestionModel> m_questionDB;
         public QuizModel()
         {
+            Console.WriteLine("QuizModel created");
             Score = 0;
-            m_quiz = null;
+            Quiz = null;
         }
 
-        public void StartQuiz(int numberofquestions)
+        public async Task<bool> StartQuizAsync(int numberofquestions)
         {
             Score = 0;
             var repo = new QuizRepository(new DataContext());
-            m_quiz = repo.GenerateQuiz(numberofquestions);
-            Count = m_quiz.Count;
+            Quiz = await repo.GenerateQuizAsync(numberofquestions) as List<QuestionModel>;
+            Count = Quiz.Count;
+            Console.WriteLine("Quiz has finished generating questions");
+            return true;
         }
 
         public static void ScoreQuestion(QuestionModel question)

@@ -27,8 +27,10 @@ namespace QuizApp.Views
             InitializeComponent();
         }
 
-        private void Start_Click(object sender, RoutedEventArgs e)
+        private async void Start_Click(object sender, RoutedEventArgs e)
         {
+            var context = DataContext as HomeViewModel;
+            await context.Start();
             NavigationService.Navigate(new Uri("Views/QuizView.xaml", UriKind.Relative));
         }
 

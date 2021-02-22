@@ -18,15 +18,20 @@ namespace QuizApp.ViewModels
         {
             get
             {
-                var i = Math.Min(m_questionIndex, m_quiz.Count - 1); 
-                return m_quiz[i].Question;
+                if(m_quiz != null)
+                {
+                    var i = Math.Min(m_questionIndex, m_quiz.Count - 1);
+                    return m_quiz[i].Question;
+                }
+
+                return string.Empty;
             } 
         }
         public IEnumerable<OptionModel> Options 
         { 
             get
             {
-                return m_quiz[m_questionIndex].OptionModel;
+                return m_quiz?[m_questionIndex].OptionModel;
             }
         }
 
@@ -34,7 +39,7 @@ namespace QuizApp.ViewModels
         {
             get
             {
-                return "Question " + (m_questionIndex + 1) + " / " + m_quiz.Count;
+                return "Question " + (m_questionIndex + 1) + " / " + m_quiz?.Count;
             }
         }
 
@@ -42,7 +47,7 @@ namespace QuizApp.ViewModels
         {
             get
             {
-                if(m_questionIndex >= m_quiz.Count - 1)
+                if(m_questionIndex >= m_quiz?.Count - 1)
                 {
                     return Visibility.Visible;
                 }
@@ -73,7 +78,7 @@ namespace QuizApp.ViewModels
 
         public QuizViewModel()
         {
-            Console.WriteLine("init");
+            Console.WriteLine("QuizViewModel created");
             m_quiz = QuizModel.Quiz;
             OnPropertyChanged(nameof(Finish));
         }
