@@ -18,7 +18,7 @@ namespace QuizApp
         
         public App()
         {
-            Seed.SeedQuestions(new DataContext());
+            Seed.SerializeDatabase(new DataContext());
         }
 
         public static int SumPositiveNumbers(IEnumerable<object> sequence)
